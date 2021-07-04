@@ -1,5 +1,6 @@
 package com.gmail.merikbest2015.ecommerce.service.Impl;
 
+import com.charlieczh.cxfjms.wsdl2java.client.SoapOverJmsClient;
 import com.gmail.merikbest2015.ecommerce.domain.Order;
 import com.gmail.merikbest2015.ecommerce.domain.OrderItem;
 import com.gmail.merikbest2015.ecommerce.domain.Perfume;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.xml.datatype.DatatypeConfigurationException;
 
 @Service
 @RequiredArgsConstructor
@@ -81,6 +84,12 @@ public class OrderServiceImpl implements OrderService {
         Map<String, Object> attributes = new HashMap<>();
         attributes.put("order", order);
         mailSender.sendMessageHtml(order.getEmail(), subject, template, attributes);
+        
+        try {
+			new SoapOverJmsClient().postOrder(order);
+		} catch (DatatypeConfigurationException e) {
+			e.printStackTrace();
+		}
         return order;
     }
 

@@ -38,7 +38,7 @@ Password: admin
 2. Install maven 3
 3. Install Postgresql
 4. Install Lombok and GraphQL plugins in Intellij IDEA
-5. Create a new DB (perfume) in Postgresql
+5. Create a new DB (perfume) in Postgresql (and put the username and password in applications.properties line 2,3)
 6. In file application.properties: <br/>
    6.1 Change your upload path to directory .../ecommerce-spring-reactjs/src/main/resources/uploads (variable upload.path (10 line)) <br/>
    6.2 Type your username and password from your gmail account on 14 and 16 lines. <br/>
@@ -46,6 +46,7 @@ Password: admin
    If you do not change this setting in your Google account, then when sending a message to an email, a 500 server error will occur. <br/>
 7. Install node.js
 8. Type in console command: npm install (or yarn install)
+
 
 ## Swagger Documentation
 

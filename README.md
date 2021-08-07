@@ -44,8 +44,8 @@ Password: admin
    6.2 Type your username and password from your gmail account on 14 and 16 lines. <br/>
        6.2.1 Go to https://myaccount.google.com/u/2/lesssecureapps and change to: “Allow less secure apps: ON”.
    If you do not change this setting in your Google account, then when sending a message to an email, a 500 server error will occur. <br/>
-   6.3 In src/main/java/com/charlieczh/cxfjms/wsdl2java/service/OrderService_Service.java (line 29) put your local path to cxf-jms/src/main/resources/schema/OrderService.xml
-   6.4 put the username and password to your postgresql db in applications.properties line 2,3
+   6.3 In src/main/java/com/charlieczh/cxfjms/wsdl2java/service/OrderService_Service.java (line 29) put your local path to cxf-jms/src/main/resources/schema/OrderService.xml           
+   6.4 put the username and password to your postgresql db in applications.properties line 2,3               
 7. Install node.js
 8. Type in console command: npm install (or yarn install) in the frontend directory
 9. (go back to the main project directory - in intellij community and run in the terminal:) mvn spring-boot: run

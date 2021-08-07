@@ -45,7 +45,8 @@ Password: admin
    6.3 Go to https://myaccount.google.com/u/2/lesssecureapps and change to: “Allow less secure apps: ON”.
    If you do not change this setting in your Google account, then when sending a message to an email, a 500 server error will occur. <br/>
 7. Install node.js
-8. Type in console command: npm install (or yarn install)
+8. Type in console command: npm install (or yarn install) in the frontend directory
+9. (go back to the main project directory - in intellij community and run in the terminal:) mvn spring-boot: run
 
 
 ## Swagger Documentation
